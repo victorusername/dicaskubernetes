@@ -1,0 +1,2 @@
+# dicaskubernetes
+KUBERNETES IS EASY, IT'S HARD TO LIKE JAVA
