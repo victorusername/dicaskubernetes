@@ -1,0 +1,7 @@
+# Control Plane
+
+- O **Control Plane** é o "cérebro central" do Kubernetes, onde todas as decisões são feitas e organizadas. Ele é composto por várias partes (como etcd, kube-apiserver, kube-scheduler e kube-controller) que trabalham juntas para gerenciar e controlar tudo o que acontece com os aplicativos, escolhendo onde e como eles vão rodar.
+- **etcd**: Imagine um bloco de notas mágico onde o Kubernetes guarda todas as informações sobre o que está acontecendo, como quais apps estão rodando e onde. É o "cérebro" do Kubernetes.
+- **kube-apiserver**: É o "telefone" do Kubernetes, que recebe e envia todas as mensagens entre as partes do sistema. Ele coordena tudo para que as mudanças sejam feitas.
+- **kube-scheduler**: Ele é o "organizador de festas" do Kubernetes, que decide onde cada app vai rodar, escolhendo o melhor lugar para cada um conforme os recursos disponíveis.
+- **kube-controller**: São como "robôs ajudantes" que garantem que tudo está do jeito que deve ser, como se fosse um time de supervisores que faz ajustes sempre que algo sai do lugar.
