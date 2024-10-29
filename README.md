@@ -35,3 +35,16 @@ Temos três tipos de *Container Runtime*:
 - High-level: são os *Container Runtime* que são executados por um *Container Engine*, como o containerd, o CRI-O e o Podman.
 - Sandbox: são os *Container Runtime* que são executados por um *Container Engine* e que são responsáveis por executar containers de forma segura em unikernels ou utilizando algum proxy para fazer a comunicação com o Kernel. O gVisor é um exemplo de *Container Runtime* do tipo Sandbox.
 - Virtualized: são os *Container Runtime* que são executados por um *Container Engine* e que são responsáveis por executar containers de forma segura em máquinas virtuais. A performance aqui é um pouco menor do que quando temos um sendo executado nativamente. O Kata Containers é um exemplo de *Container Runtime* do tipo Virtualized.
+
+
+# **O que é o Kubernetes?**
+
+Kubernetes (ou k8s) é uma plataforma open-source criada pela Google em 2014 para orquestrar contêineres, ajudando a gerenciar e automatizar a execução de aplicativos em contêineres. Inspirado no projeto Borg da Google, o Kubernetes facilita o controle e a escalabilidade de ambientes complexos de contêineres, organizando-os para otimizar o uso de recursos e garantir alta disponibilidade.
+
+**Aqui estão alguns dos conceitos fundamentais do Kubernetes (k8s) que ajudam a entender sua abordagem ao gerenciamento de contêineres:**
+
+Pods: A menor unidade gerenciada pelo Kubernetes, consistindo em um ou mais contêineres que compartilham a mesma rede e armazenamento. O k8s organiza e controla os contêineres por meio de pods, que podem ser criados e removidos conforme as necessidades da aplicação.
+
+Nodes: Máquinas, que podem ser físicas ou virtuais, responsáveis por hospedar e executar os pods. Um cluster Kubernetes é formado por vários nodes, que são gerenciados de maneira automática.
+
+Cluster: Conjunto de nodes que trabalham em conjunto e formam a estrutura fundamental do Kubernetes para organizar e orquestrar os recursos de computação.
