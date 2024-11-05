@@ -1,0 +1,46 @@
+- **Listar todos os namespaces**:
+    
+    ```bash
+    kubectl get namespace
+    ```
+    
+- **Listar todos os pods no namespace `kube-system`**:
+    
+    ```bash
+    kubectl get pods -n kube-system
+    ```
+    
+- **Listar todos os pods no namespace `kube-system` com detalhes adicionais (modo wide)**:
+    
+    ```bash
+    kubectl get pods -n kube-system -o wide
+    ```
+    
+- **Listar todos os pods em todos os namespaces (sinalizador `a` é obsoleto)**:
+    
+    ```bash
+    kubectl get pods -A
+    ```
+    
+- Esse comando tenta criar um pod com a imagem **nginx**, expor uma porta, e realizar um **dry run** (uma simulação). No entanto, a sintaxe está incorreta; o parâmetro `--port` espera um número de porta, mas foi dado o valor **giropops**.
+
+```bash
+kubectl run giropops --image=nginx --port=80 --dry-run=client
+
+```
+
+- Explicação dos parâmetros corrigidos:
+    - `run giropops`: cria um pod chamado **giropops**.
+    - `-image=nginx`: especifica a imagem **nginx** para o pod.
+    - `-port=80`: expõe a porta **80** no pod.
+    - `-dry-run=client`: executa o comando em modo "simulação" apenas no lado do cliente, sem realmente criar o pod no cluster. É útil para verificar a estrutura do comando antes de aplicá-lo.
+
+kubectl create -f exemple.yaml → Ele irá criar o que esta dentro do .yaml
+
+kubectl apply -f exemple.yaml → Ele cria mas também atualiza o que estiver dentro do yaml
+
+kubectl run namecontainer --image alpine --dry-run=client →este comando faz com que testamos o comando como se ele fosse executar mesmo, com o dry-run=client.
+
+kubectl logs namecontainer → Mostra os logs do container
+
+kubectl logs namecontainer -c apache →Ele filtra o log por apache
