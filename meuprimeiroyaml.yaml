@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: firstyaml
+  name: firstyaml
+spec:
+  containers:
+  - image: ubuntu
+    name: ubuntu
+    args:
+    - sleep
+    - "600"
+    resources:
+      limits:
+        cpu: "1"
+        memory: "128Mi"
+      requests:
+        cpu: "0.5"
+        memory: "64Mi"
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
