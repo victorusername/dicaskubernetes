@@ -1,0 +1,13 @@
+Menor unidade dentro do kubernetes. O Pod não é igual um container.
+
+**kubectl** get pods → ver os pods
+
+**kubectl** get pods -a → ver todos os pods até os off
+
+**kubectl** describe pods nomedopods →ver toda descrição do pods
+
+**kubectl** pods nomedopods -o (output) yaml → Aparece todas as informações em yaml do pods
+
+**kubectl** get pods -o wide → Ele mostra o node e o IP
+
+**kubectl** get pods -L run → Ele filtra por label
