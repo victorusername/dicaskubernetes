@@ -1,0 +1,17 @@
+## Control Plane
+
+Kube API Server → 6443 →TCP
+
+ETCD → 2379 - 2380 → TCP
+
+Kube Scheduller → 10251 → TCP
+
+Kubelet → 10250 → TCP
+
+Kube - Controller → 10252 → TCP
+
+## Worker
+
+Node Port → 30000 até 32767 → TCP
+
+Weave Net → 6783 - 6784 → TCP/UDP
